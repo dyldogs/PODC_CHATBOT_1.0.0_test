@@ -17,10 +17,10 @@ app = Flask(__name__)
 CORS(app, resources={
     r"/chat": {
         "origins": [
-            "http://localhost:5000",  # Local development
-            "http://127.0.0.1:5000",  # Local development alternative
-            "https://podc-chatbot-frontend-test.onrender.com",  # Add your new frontend URL
-            "https://*.onrender.com"  # If hosting frontend on Render
+            "http://localhost:5000",
+            "http://127.0.0.1:5000",
+            "https://podc-chatbot-frontend-test.onrender.com",
+            "https://*.onrender.com"
         ],
         "methods": ["POST"],
         "allow_headers": ["Content-Type"]
