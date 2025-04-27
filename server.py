@@ -14,7 +14,18 @@ else:
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={
+    r"/chat": {
+        "origins": [
+            "http://localhost:5000",  # Local development
+            "http://127.0.0.1:5000",  # Local development alternative
+            "https://podc-chatbot-1-0-0-test.onrender.com",  # Replace with your actual domain
+            "https://*.onrender.com"  # If hosting frontend on Render
+        ],
+        "methods": ["POST"],
+        "allow_headers": ["Content-Type"]
+    }
+})
 
 # Set up OpenAI client using the key from environment
 api_key = os.getenv("OPENAI_API_KEY")
