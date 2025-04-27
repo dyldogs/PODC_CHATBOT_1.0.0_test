@@ -19,7 +19,7 @@ CORS(app, resources={
         "origins": [
             "http://localhost:5000",  # Local development
             "http://127.0.0.1:5000",  # Local development alternative
-            "https://podc-chatbot-1-0-0-test.onrender.com",  # Replace with your actual domain
+            "https://podc-chatbot-frontend-test.onrender.com",  # Add your new frontend URL
             "https://*.onrender.com"  # If hosting frontend on Render
         ],
         "methods": ["POST"],
