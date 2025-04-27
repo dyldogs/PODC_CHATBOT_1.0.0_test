@@ -85,5 +85,10 @@ def chat():
         return jsonify({'response': 'Sorry, something went wrong.', 'citations': []}), 500
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+    import platform
+    if platform.system() == 'Windows':
+        from waitress import serve
+        serve(app, host='0.0.0.0', port=5000)
+    else:
+        port = int(os.environ.get("PORT", 5000))
+        app.run(host='0.0.0.0', port=port)
