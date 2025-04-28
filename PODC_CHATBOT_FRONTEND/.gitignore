@@ -1,0 +1,8 @@
+// filepath: c:\Users\dylan\COMP3850\PROTOTYPE TEST\PODC_CHATBOT_FRONTEND.gitignore
+.env
+__pycache__/
+*.pyc
+dist/
+build.sh
+build.bat
+build.ps1
