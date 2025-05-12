@@ -1,0 +1,8 @@
+flask
+flask-cors
+openai>=1.1.0
+python-dotenv
+gunicorn
+waitress
+pathlib
+requests
